@@ -1,0 +1,47 @@
+{
+  "compatibility_date": "2025-04-01",
+  "main": "src/index.ts",
+  "name": "mark-testing-pages-migration",
+  "upload_source_maps": true,
+  "observability": {
+    "enabled": true
+  },
+  // "d1_databases": [
+  //   {
+  //     "binding": "DB",
+  //     "database_id": "a90fb3ab-a580-47ef-80e0-31f643ae14cb",
+  //     "database_name": "mark-testing-pages-migration-production"
+  //   },
+  //   {
+  //     "binding": "DB",
+  //     "database_id": "f8121f09-cbe8-48c3-b799-9a4cf94bde93",
+  //     "database_name": "mark-testing-pages-migration-preview"
+  //   }
+  // ],
+  "env": {
+    "production": {
+      "vars": {
+        "ENVIRONMENT": "production"
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_id": "a90fb3ab-a580-47ef-80e0-31f643ae14cb",
+          "database_name": "mark-testing-pages-migration-production"
+        }
+      ]
+    },
+    "preview": {
+      "vars": {
+        "ENVIRONMENT": "preview"
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_id": "f8121f09-cbe8-48c3-b799-9a4cf94bde93",
+          "database_name": "mark-testing-pages-migration-preview"
+        }
+      ]
+    }
+  }
+}
